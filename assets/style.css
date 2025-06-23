@@ -17,6 +17,50 @@ a {
   margin: 0 auto;
 }
 
+.h1 {
+  margin-top: 24px;
+  margin-left: 70px;
+  margin-bottom: 22px;
+}
+
+/* BEST SELLS */
+
+.best-container {
+  display: flex;
+  max-width: 1395px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch; /* для плавного скролла на iOS */
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox Firefox */
+}
+
+.best-container:active {
+  cursor: grabbing;
+}
+
+.best-container::-webkit-scrollbar {
+  display: none; /* скрываем стандартный скроллбар */
+}
+
+.game {
+  /* align-items: center; */
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.game-img {
+  width: 236px;
+  height: 295px;
+  border-radius: 10px;
+}
+
 /* Стили для шапки */
 header {
   background-color: #000000;
@@ -127,20 +171,38 @@ header {
 .popular-container {
   display: flex;
   width: 100%;
-  max-width: 1379px;
+  max-width: 1504px;
+  margin: 0 auto;
 }
 
 .popular-game {
   background-color: black;
   color: white;
-  border-top-right-radius: 21px;
-  border-bottom-right-radius: 21px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
   position: relative;
-  left: -16px;
-  /* right: 0; */
+  /* left: -16px; */
   max-width: 462px;
   max-height: 468px;
   flex: 1 0 462px;
+  margin-right: 13px;
+}
+
+.popular-img {
+  margin-left: 13px;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.on-center {
+  text-align: center;
+  margin-top: 40px;
 }
 /* Адаптивные стили */
 @media (max-width: 1200px) {

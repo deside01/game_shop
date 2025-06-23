@@ -46,10 +46,15 @@
     </header>
 
     <main class="container">
-      <h1>Популярное и рекомендуемое</h1>
+      <h1 class="h1">Популярное и рекомендуемое</h1>
       <div class="popular-container">
-        <span class="popular-img">
+        <span class="arrow">
+          <img src="./assets/img/left.svg" alt="" />
+        </span>
+
+        <span>
           <img
+            class="popular-img"
             src="./assets/img/background.webp"
             alt=""
             width="933"
@@ -64,7 +69,196 @@
             Палача Рока и прольют кровь демонов в средневековой войне с адом.
           </p>
         </div>
+        <span class="arrow">
+          <img src="./assets/img/right.svg" alt="" />
+        </span>
+      </div>
+
+      <h1 class="h1">Лидеры продаж</h1>
+      <div class="best-container" id="scrollContainer">
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/gta.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Grand Theft Auto 5</h3>
+          <p>999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/fz5.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Forza Horizon 5</h3>
+          <p>2999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/helldi.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Helldivers 2</h3>
+          <p>3999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/gta.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Grand Theft Auto 5</h3>
+          <p>999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/fz5.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Forza Horizon 5</h3>
+          <p>2999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/helldi.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Helldivers 2</h3>
+          <p>3999₽</p>
+        </div>
+      </div>
+
+      <h1 class="h1">Рекомендуемое</h1>
+      <div class="best-container" id="scrollContainer2">
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/gta.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Grand Theft Auto 5</h3>
+          <p>999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/fz5.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Forza Horizon 5</h3>
+          <p>2999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/helldi.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Helldivers 2</h3>
+          <p>3999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/gta.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Grand Theft Auto 5</h3>
+          <p>999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/fz5.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Forza Horizon 5</h3>
+          <p>2999₽</p>
+        </div>
+        <div class="game">
+          <img
+            class="game-img"
+            src="./assets/img/helldi.webp"
+            alt=""
+            draggable="false"
+          />
+          <h3>Helldivers 2</h3>
+          <p>3999₽</p>
+        </div>
+      </div>
+
+      <div class="on-center">
+        <a class="catalog-btn" href=""> Все товары </a>
       </div>
     </main>
+    <script>
+      const ids = ["scrollContainer", "scrollContainer2"];
+      ids.forEach((id) => {
+        const scrollContainer = document.getElementById(id);
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        scrollContainer.addEventListener("mousedown", (e) => {
+          isDown = true;
+          startX = e.pageX - scrollContainer.offsetLeft;
+          scrollLeft = scrollContainer.scrollLeft;
+          scrollContainer.style.scrollBehavior = "auto"; // отключаем плавный скролл при перетаскивании
+        });
+
+        scrollContainer.addEventListener("mouseleave", () => {
+          isDown = false;
+        });
+
+        scrollContainer.addEventListener("mouseup", () => {
+          isDown = false;
+          scrollContainer.style.scrollBehavior = "smooth"; // возвращаем плавный скролл
+        });
+
+        scrollContainer.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - scrollContainer.offsetLeft;
+          const walk = (x - startX) * 2; // множитель 2 для более быстрого скролла
+          scrollContainer.scrollLeft = scrollLeft - walk;
+        });
+
+        // Добавляем поддержку touch-устройств
+        scrollContainer.addEventListener("touchstart", (e) => {
+          isDown = true;
+          startX = e.touches[0].pageX - scrollContainer.offsetLeft;
+          scrollLeft = scrollContainer.scrollLeft;
+          scrollContainer.style.scrollBehavior = "auto";
+        });
+
+        scrollContainer.addEventListener("touchend", () => {
+          isDown = false;
+          scrollContainer.style.scrollBehavior = "smooth";
+        });
+
+        scrollContainer.addEventListener("touchmove", (e) => {
+          if (!isDown) return;
+          const x = e.touches[0].pageX - scrollContainer.offsetLeft;
+          const walk = (x - startX) * 2;
+          scrollContainer.scrollLeft = scrollLeft - walk;
+        });
+      });
+    </script>
   </body>
 </html>

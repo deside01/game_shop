@@ -15,6 +15,7 @@ a {
   width: 100%;
   max-width: 1530px;
   margin: 0 auto;
+  /* padding: 0 15px; */
 }
 
 .h1 {
@@ -50,9 +51,13 @@ a {
 }
 
 .game {
-  /* align-items: center; */
   text-align: center;
   flex: 0 0 auto;
+}
+
+.game p {
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 .game-img {
@@ -173,6 +178,7 @@ header {
   width: 100%;
   max-width: 1504px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .popular-game {
@@ -181,17 +187,48 @@ header {
   border-top-right-radius: 35px;
   border-bottom-right-radius: 35px;
   position: relative;
-  /* left: -16px; */
   max-width: 462px;
   max-height: 468px;
-  flex: 1 0 462px;
   margin-right: 13px;
+  width: 100%;
+}
+
+.popular-head {
+  margin: 15px;
+  margin-bottom: 10px;
+  font-size: clamp(1.2em, 4vw, 2em);
+}
+
+.popular-desc {
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: clamp(1em, 3vw, 1.6em);
 }
 
 .popular-img {
   margin-left: 13px;
   border-top-left-radius: 35px;
   border-bottom-left-radius: 35px;
+  max-width: 100%; /* Делаем изображение адаптивным */
+  height: auto;
+}
+
+.leader-sell {
+  display: table;
+  background-color: #3d4042;
+  width: 100%; /* Делаем ширину адаптивной */
+  max-width: 220px; /* Но не больше 220px */
+  height: 50px;
+  margin: 15px;
+  font-size: clamp(1em, 3vw, 1.6em); /* Адаптивный размер шрифта */
+  border-radius: 7px;
+  font-weight: 400;
+}
+
+.leader-sell p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .arrow {
@@ -254,6 +291,38 @@ header {
   .search-form {
     max-width: 100%;
   }
+
+  .footer {
+    gap: 12%; /* Уменьшаем отступ между колонками */
+  }
+
+  .popular-container {
+    flex-direction: column; /* Меняем направление на вертикальное */
+    align-items: center;
+  }
+
+  .popular-game {
+    max-width: 100%;
+    margin-right: 0;
+    margin-top: 20px;
+    border-radius: 35px; /* Убираем скругление только с правой стороны */
+  }
+
+  .popular-img {
+    margin-left: 0;
+    border-radius: 35px; /* Убираем скругление только с левой стороны */
+  }
+
+  .arrow {
+    display: none; /* Скрываем стрелки на мобильных */
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    gap: 8%; /* Еще меньше отступ */
+    padding: 0 20px; /* Добавляем боковые отступы */
+  }
 }
 
 @media (max-width: 768px) {
@@ -289,6 +358,32 @@ header {
     width: 100%;
     text-align: center;
   }
+
+  .footer {
+    flex-direction: column; /* Меняем направление на вертикальное */
+    gap: 20px; /* Увеличиваем вертикальные отступы */
+    margin-top: 10px;
+    padding: 0 10px;
+    padding-left: 30px;
+  }
+
+  .ul-flex {
+    flex-wrap: wrap; /* Разрешаем перенос элементов в горизонтальном меню */
+    gap: 10px; /* Добавляем отступы между элементами */
+  }
+
+  .popular-head {
+    font-size: 1.5em;
+  }
+
+  .popular-desc {
+    font-size: 1.1em;
+  }
+
+  .leader-sell {
+    font-size: 1.1em;
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -307,32 +402,25 @@ header {
   .user-actions {
     gap: 10px;
   }
-}
 
-@media (max-width: 1200px) {
-  .footer {
-    gap: 12%; /* Уменьшаем отступ между колонками */
-  }
-}
-
-@media (max-width: 992px) {
-  .footer {
-    gap: 8%; /* Еще меньше отступ */
-    padding: 0 20px; /* Добавляем боковые отступы */
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column; /* Меняем направление на вертикальное */
-    gap: 20px; /* Увеличиваем вертикальные отступы */
-    margin-top: 10px;
-    padding: 0 10px;
-    margin-left: 30px;
+  .popular-head {
+    font-size: 1.2em;
+    margin: 10px;
   }
 
-  .ul-flex {
-    flex-wrap: wrap; /* Разрешаем перенос элементов в горизонтальном меню */
-    gap: 10px; /* Добавляем отступы между элементами */
+  .popular-desc {
+    font-size: 0.9em;
+    margin-left: 10px;
+  }
+
+  .leader-sell {
+    font-size: 0.9em;
+    height: 35px;
+    margin: 10px;
+  }
+
+  .popular-game,
+  .popular-img {
+    border-radius: 20px; /* Уменьшаем скругление для маленьких экранов */
   }
 }

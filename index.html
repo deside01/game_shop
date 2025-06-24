@@ -55,7 +55,7 @@
         <span>
           <img
             class="popular-img"
-            src="./assets/img/background.webp"
+            src="./assets/img/doom.png"
             alt=""
             width="933"
             height="468"
@@ -206,59 +206,49 @@
         <a class="catalog-btn" href=""> Все товары </a>
       </div>
     </main>
-    <script>
-      const ids = ["scrollContainer", "scrollContainer2"];
-      ids.forEach((id) => {
-        const scrollContainer = document.getElementById(id);
 
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+    <footer class="footer-container">
+      <div class="footer">
+        <div class="footer-logo">
+          <div class="logo">Л</div>
+          <div class="site-name">Playstore</div>
+        </div>
+        <div class="footer-nav">
+          <h3>Навигация</h3>
+          <ul>
+            <li><a href="">Главная</a></li>
+            <li><a href="">Каталог</a></li>
+            <li><a href="">Избранное</a></li>
+            <li><a href="">Корзина</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h3>Ресурсы</h3>
+          <ul class="ul-flex">
+            <li>
+              <a href="">
+                <img src="./assets/img/vk.svg" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/img/tg.svg" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/img/discord.svg" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h3>Техническая поддержка</h3>
+          <a href="mailto:support@playstore.ru">support@playstore.ru</a>
+        </div>
+      </div>
+    </footer>
 
-        scrollContainer.addEventListener("mousedown", (e) => {
-          isDown = true;
-          startX = e.pageX - scrollContainer.offsetLeft;
-          scrollLeft = scrollContainer.scrollLeft;
-          scrollContainer.style.scrollBehavior = "auto"; // отключаем плавный скролл при перетаскивании
-        });
-
-        scrollContainer.addEventListener("mouseleave", () => {
-          isDown = false;
-        });
-
-        scrollContainer.addEventListener("mouseup", () => {
-          isDown = false;
-          scrollContainer.style.scrollBehavior = "smooth"; // возвращаем плавный скролл
-        });
-
-        scrollContainer.addEventListener("mousemove", (e) => {
-          if (!isDown) return;
-          e.preventDefault();
-          const x = e.pageX - scrollContainer.offsetLeft;
-          const walk = (x - startX) * 2; // множитель 2 для более быстрого скролла
-          scrollContainer.scrollLeft = scrollLeft - walk;
-        });
-
-        // Добавляем поддержку touch-устройств
-        scrollContainer.addEventListener("touchstart", (e) => {
-          isDown = true;
-          startX = e.touches[0].pageX - scrollContainer.offsetLeft;
-          scrollLeft = scrollContainer.scrollLeft;
-          scrollContainer.style.scrollBehavior = "auto";
-        });
-
-        scrollContainer.addEventListener("touchend", () => {
-          isDown = false;
-          scrollContainer.style.scrollBehavior = "smooth";
-        });
-
-        scrollContainer.addEventListener("touchmove", (e) => {
-          if (!isDown) return;
-          const x = e.touches[0].pageX - scrollContainer.offsetLeft;
-          const walk = (x - startX) * 2;
-          scrollContainer.scrollLeft = scrollLeft - walk;
-        });
-      });
-    </script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>

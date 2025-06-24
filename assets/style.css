@@ -204,6 +204,45 @@ header {
   text-align: center;
   margin-top: 40px;
 }
+
+/* FOOTER START */
+.footer-container {
+  background-color: black;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer {
+  color: white;
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+  gap: 17%;
+  flex-wrap: wrap;
+}
+
+.footer ul li {
+  margin-top: 5px;
+}
+
+.footer a {
+  margin-left: 10px;
+  color: white;
+}
+
+.ul-flex {
+  margin-top: 4px;
+
+  display: flex;
+}
+/* FOOTER END */
+
 /* Адаптивные стили */
 @media (max-width: 1200px) {
   .nav-section {
@@ -267,5 +306,33 @@ header {
 
   .user-actions {
     gap: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    gap: 12%; /* Уменьшаем отступ между колонками */
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    gap: 8%; /* Еще меньше отступ */
+    padding: 0 20px; /* Добавляем боковые отступы */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Меняем направление на вертикальное */
+    gap: 20px; /* Увеличиваем вертикальные отступы */
+    margin-top: 10px;
+    padding: 0 10px;
+    margin-left: 30px;
+  }
+
+  .ul-flex {
+    flex-wrap: wrap; /* Разрешаем перенос элементов в горизонтальном меню */
+    gap: 10px; /* Добавляем отступы между элементами */
   }
 }

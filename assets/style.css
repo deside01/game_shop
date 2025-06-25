@@ -205,12 +205,68 @@ header {
   font-size: clamp(1em, 3vw, 1.6em);
 }
 
+.popular {
+  position: relative; /* Это создаёт контекст позиционирования для дочерних элементов */
+  display: inline-block; /* Чтобы контейнер подстраивался под размер изображения */
+}
+
 .popular-img {
   margin-left: 13px;
   border-top-left-radius: 35px;
   border-bottom-left-radius: 35px;
-  max-width: 100%; /* Делаем изображение адаптивным */
-  height: auto;
+  max-width: 933px;
+  max-height: 468px;
+  height: 100%;
+  width: 100%;
+  /* display: block; Убирает лишнее пространство под изображением */
+}
+
+.button-container {
+  display: flex;
+  background-color: #000000a8;
+  max-width: 933px;
+  width: 100%;
+  position: absolute; /* Позиционируем абсолютно относительно .popular */
+  bottom: 0; /* Отступ от нижнего края */
+  height: 100px;
+  margin-left: 13px;
+  border-bottom-left-radius: 35px;
+}
+
+.popular-btn-position {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  align-items: center;
+  max-width: 850px;
+  width: 100%;
+}
+
+.popular-btn-position a {
+  display: block; /* или inline-block */
+  text-align: center;
+  min-width: 15%;
+}
+
+.popular-btn-position p {
+  color: rgb(0, 236, 0);
+  display: block;
+  text-align: right;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.popular-btn {
+  background-color: #4e73df;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  height: fit-content;
 }
 
 .leader-sell {
@@ -256,7 +312,7 @@ header {
 .footer {
   color: white;
   display: flex;
-  max-width: 1400px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
   margin-top: 15px;
@@ -271,6 +327,21 @@ header {
 .footer a {
   margin-left: 10px;
   color: white;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo img {
+  width: 50px;
+}
+
+.footer-logo p {
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 .ul-flex {

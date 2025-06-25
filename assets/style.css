@@ -174,11 +174,13 @@ header {
 }
 
 .popular-container {
+  position: relative;
   display: flex;
   width: 100%;
   max-width: 1504px;
   margin: 0 auto;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .popular-game {
@@ -208,6 +210,8 @@ header {
 .popular {
   position: relative; /* Это создаёт контекст позиционирования для дочерних элементов */
   display: inline-block; /* Чтобы контейнер подстраивался под размер изображения */
+  /* opacity: 0; */
+  /* min-width: 100%; */
 }
 
 .popular-img {
@@ -218,7 +222,6 @@ header {
   max-height: 468px;
   height: 100%;
   width: 100%;
-  /* display: block; Убирает лишнее пространство под изображением */
 }
 
 .button-container {
@@ -227,7 +230,7 @@ header {
   max-width: 933px;
   width: 100%;
   position: absolute; /* Позиционируем абсолютно относительно .popular */
-  bottom: 0; /* Отступ от нижнего края */
+  bottom: 0;
   height: 100px;
   margin-left: 13px;
   border-bottom-left-radius: 35px;
@@ -243,9 +246,10 @@ header {
 }
 
 .popular-btn-position a {
-  display: block; /* или inline-block */
+  display: block;
   text-align: center;
-  min-width: 15%;
+  min-width: 120px;
+  max-width: 140px;
 }
 
 .popular-btn-position p {
@@ -372,11 +376,15 @@ header {
     align-items: center;
   }
 
+  .button-container {
+    margin: 0;
+  }
+
   .popular-game {
     max-width: 100%;
     margin-right: 0;
-    margin-top: 20px;
-    border-radius: 35px; /* Убираем скругление только с правой стороны */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .popular-img {
@@ -455,6 +463,11 @@ header {
     font-size: 1.1em;
     height: 40px;
   }
+
+  .button-container {
+    border-bottom-left-radius: 0px;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -488,10 +501,5 @@ header {
     font-size: 0.9em;
     height: 35px;
     margin: 10px;
-  }
-
-  .popular-game,
-  .popular-img {
-    border-radius: 20px; /* Уменьшаем скругление для маленьких экранов */
   }
 }

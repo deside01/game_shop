@@ -9,6 +9,7 @@
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .container {
@@ -25,6 +26,10 @@ a {
 }
 
 /* BEST SELLS */
+
+.container .best-container a {
+  color: black;
+}
 
 .best-container {
   display: flex;
@@ -183,6 +188,21 @@ header {
   overflow: hidden;
 }
 
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  display: flex;
+  flex: 0 0 100%;
+}
+
 .popular-game {
   background-color: black;
   color: white;
@@ -198,13 +218,14 @@ header {
 .popular-head {
   margin: 15px;
   margin-bottom: 10px;
-  font-size: clamp(1.2em, 4vw, 2em);
+  font-size: clamp(1.2em, 4vw, 1.9em);
 }
 
 .popular-desc {
   margin-left: 15px;
   font-weight: 500;
-  font-size: clamp(1em, 3vw, 1.6em);
+  margin-right: 15px;
+  font-size: clamp(1em, 3vw, 1.5em);
 }
 
 .popular {
@@ -295,6 +316,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .on-center {
@@ -354,6 +377,109 @@ header {
   display: flex;
 }
 /* FOOTER END */
+
+/* FAVOURITES START */
+.favourites-container {
+  display: flex;
+  gap: 25px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.fav-game {
+  max-width: 236px;
+}
+
+.fav-game a {
+  color: black;
+}
+
+/* FAV END */
+.cart-page-container {
+  display: flex;
+  gap: 15%;
+}
+
+.order-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(230, 228, 228);
+  padding: 20px;
+  border-radius: 20px;
+  height: 200px;
+  min-width: 300px;
+  max-width: 330px;
+  width: 100%;
+  align-items: center;
+}
+
+.order-container > * {
+  margin-bottom: 50px;
+}
+
+.order-btn {
+  color: white;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: 500;
+  border-radius: 15px;
+  background-color: #000000;
+  text-align: center;
+  max-width: 260px;
+  min-width: 190px;
+  width: 100%;
+}
+
+.cart-container {
+  margin-left: 70px;
+  width: 50%;
+  max-width: 800px;
+}
+
+.cart-game {
+  display: flex;
+}
+
+.cart-a {
+  display: flex;
+  gap: 15px;
+}
+
+.cart-activation {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-activation p {
+  font-weight: 500;
+}
+
+.cart-desc > * {
+  margin-bottom: 9px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.cart-img {
+  width: 200px;
+  border-radius: 15px;
+}
+
+.delete-icon {
+  cursor: pointer;
+  margin-top: 5px;
+  align-self: flex-start;
+  justify-self: flex-end;
+  margin-left: auto;
+}
+
+.cart-price {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
 
 /* Адаптивные стили */
 @media (max-width: 1200px) {

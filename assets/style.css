@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --gray-back: rgb(243, 243, 243);
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -380,10 +384,13 @@ header {
 
 /* FAVOURITES START */
 .favourites-container {
-  display: flex;
+  display: grid;
   gap: 25px;
   margin-left: 60px;
   margin-right: 60px;
+  max-width: 1019px;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .fav-game {
@@ -403,7 +410,7 @@ header {
 .order-container {
   display: flex;
   flex-direction: column;
-  background-color: rgb(230, 228, 228);
+  background-color: var(--gray-back);
   padding: 20px;
   border-radius: 20px;
   height: 200px;
@@ -479,6 +486,70 @@ header {
   display: flex;
   gap: 20px;
   justify-content: center;
+}
+
+.catalog-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1504px;
+  width: 100%;
+  margin: 0 auto;
+  margin-left: 70px;
+}
+
+.catalog-container .favourites-container {
+  margin-left: 0;
+}
+
+.filter-container {
+  background-color: var(--gray-back);
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  height: 330px;
+}
+
+.filter-container button {
+  margin-top: 20px;
+}
+
+.h3 {
+  font-size: 1.3em;
+  /* margin-bottom: 10px; */
+}
+
+.platform-list {
+  padding: 5px;
+}
+
+.platform-list li {
+  padding-bottom: 5px;
+}
+
+.price-filter {
+  display: flex;
+  gap: 5px;
+  max-width: 300px;
+}
+
+.price-filter input {
+  width: 120px;
+  margin: 5px;
+  padding: 4px;
+}
+
+.filter-btn {
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 15px;
+  text-align: center;
+  width: 170px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Адаптивные стили */

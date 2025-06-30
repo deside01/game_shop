@@ -18,7 +18,7 @@
         <div class="header-content">
           <a href="./index.html">
             <div class="logo-section">
-              <img src="./assets/img/lgo.png" width="43" alt="" />
+              <img src="./assets/img/lgo.png" alt="" />
               <div class="site-name">Playstore</div>
             </div>
           </a>
@@ -46,75 +46,77 @@
         </div>
       </div>
     </header>
-    <main class="container">
-      <h1 class="h1">Корзина</h1>
-      <div class="cart-page-container">
-        <div class="cart-container">
-          <div class="cart-game">
-            <a class="cart-a" href="./item.html">
-              <img src="./assets/img/fz5.webp" alt="" class="cart-img" />
-              <div class="cart-desc">
-                <h2>Forza Horizon 5</h2>
-                <h2>2999 ₽</h2>
-                <div class="cart-activation">
-                  <p>Сервис активации:</p>
-                  <p class="bold">Steam</p>
+    <div class="page-wrapper">
+      <main class="container">
+        <h1 class="h1">Корзина</h1>
+        <div class="cart-page-container">
+          <div class="cart-container">
+            <div class="cart-game">
+              <a class="cart-a" href="./item.html">
+                <img src="./assets/img/fz5.webp" alt="" class="cart-img" />
+                <div class="cart-desc">
+                  <h2>Forza Horizon 5</h2>
+                  <h2>2999 ₽</h2>
+                  <div class="cart-activation">
+                    <p>Сервис активации:</p>
+                    <p class="bold">Steam</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <img src="./assets/img/delete.svg" alt="" class="delete-icon" />
+              </a>
+              <img src="./assets/img/delete.svg" alt="" class="delete-icon" />
+            </div>
+          </div>
+          <div class="order-container">
+            <div class="cart-price">
+              <h1>ИТОГО:</h1>
+              <h1>2999 ₽</h1>
+            </div>
+            <a class="order-btn" href="#">Оформить заказ</a>
           </div>
         </div>
-        <div class="order-container">
-          <div class="cart-price">
-            <h1>ИТОГО:</h1>
-            <h1>2999 ₽</h1>
+      </main>
+      <footer class="footer-container">
+        <div class="footer">
+          <div class="footer-logo">
+            <img src="./assets/img/lgo.png" width="43" alt="" />
+            <!-- <img src="./assets/img/lgoo.svg" width="43" alt="" /> -->
+            <p>Playstore</p>
           </div>
-          <a class="order-btn" href="#">Оформить заказ</a>
+          <div class="footer-nav">
+            <h3>Навигация</h3>
+            <ul>
+              <li><a href="">Главная</a></li>
+              <li><a href="">Каталог</a></li>
+              <li><a href="">Избранное</a></li>
+              <li><a href="">Корзина</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h3>Ресурсы</h3>
+            <ul class="ul-flex">
+              <li>
+                <a href="">
+                  <img src="./assets/img/vk.svg" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./assets/img/tg.svg" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./assets/img/discord.svg" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h3>Техническая поддержка</h3>
+            <a href="mailto:support@playstore.ru">support@playstore.ru</a>
+          </div>
         </div>
-      </div>
-    </main>
-    <footer class="footer-container" style="position: fixed">
-      <div class="footer">
-        <div class="footer-logo">
-          <img src="./assets/img/lgo.png" width="43" alt="" />
-          <!-- <img src="./assets/img/lgoo.svg" width="43" alt="" /> -->
-          <p>Playstore</p>
-        </div>
-        <div class="footer-nav">
-          <h3>Навигация</h3>
-          <ul>
-            <li><a href="">Главная</a></li>
-            <li><a href="">Каталог</a></li>
-            <li><a href="">Избранное</a></li>
-            <li><a href="">Корзина</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav">
-          <h3>Ресурсы</h3>
-          <ul class="ul-flex">
-            <li>
-              <a href="">
-                <img src="./assets/img/vk.svg" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="./assets/img/tg.svg" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="./assets/img/discord.svg" />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-nav">
-          <h3>Техническая поддержка</h3>
-          <a href="mailto:support@playstore.ru">support@playstore.ru</a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

@@ -16,11 +16,22 @@ a {
   color: black;
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   width: 100%;
   max-width: 1530px;
   margin: 0 auto;
   /* padding: 0 15px; */
+  flex: 1;
+}
+
+.page-wrapper .container {
+  margin-bottom: 60px;
 }
 
 .h1 {
@@ -48,7 +59,7 @@ a {
   user-select: none;
   -webkit-overflow-scrolling: touch; /* для плавного скролла на iOS */
   -ms-overflow-style: none; /* IE и Edge */
-  scrollbar-width: none; /* Firefox Firefox */
+  scrollbar-width: none; /* Firefox */
 }
 
 .best-container:active {
@@ -95,6 +106,10 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.logo-section img {
+  width: 43px;
 }
 
 .logo {
@@ -336,7 +351,6 @@ header {
   bottom: 0;
   width: 100%;
   margin: 0 auto;
-  margin-top: 40px;
   padding-bottom: 40px;
 }
 

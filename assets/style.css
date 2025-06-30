@@ -552,6 +552,94 @@ header {
   margin: 0 auto;
 }
 
+.item-img {
+  width: clamp(300px, 376px, 400px);
+  border-radius: 15px;
+}
+
+.left-data {
+  margin-top: 10px;
+  margin-left: 4px;
+  display: flex;
+  gap: 20px;
+}
+
+.ul-left-data {
+  font-size: 1.1em;
+}
+
+.ul-left-data li {
+  margin-bottom: 3px;
+}
+
+.item-container {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 50px;
+  gap: 40px;
+}
+
+.item-h1 {
+  font-size: 2.7em;
+}
+
+.cart-btn {
+  width: 130px;
+  padding: 8px;
+  margin: 0;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+
+.price-font {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.price-wrapper {
+  margin-left: -1px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.activation-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.item-h2 {
+  font-size: 2em;
+}
+
+.right-item {
+  max-width: 800px;
+  width: 100%;
+}
+
+.right-item > * {
+  margin-bottom: 10px;
+}
+
+.description-wrapper > * {
+  margin-bottom: 10px;
+}
+
+.description-wrapper p {
+  font-size: 1.2em;
+}
+
+.reqs-lists {
+  margin-top: 5px;
+  display: flex;
+  gap: 25px;
+  font-size: 1.2em;
+}
+
+.reqs-lists ul li {
+  margin-bottom: 3px;
+}
 /* Адаптивные стили */
 @media (max-width: 1200px) {
   .nav-section {
